@@ -1,0 +1,21 @@
+# Site settings
+title: Adventures in Changing Your Path
+header-img: img/home-bg.png
+email: zoebisch@gmail.com
+copyright_name: zoebisch
+description: > # this means to ignore newlines until "baseurl:"
+  From Underwater Acoustics to Web Development, A Transformation
+baseurl: "" # the subpath of your site, e.g. /blog
+twitter_username: 
+github_username:  zoebisch
+learn_profile: zoebisch
+email_username: zoebisch@gmail.com
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+gems: [jekyll-paginate, jekyll-feed]
