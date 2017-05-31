@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Thoughts on efficiency and context within programming
-date:   2017-05-31 00:04:42 +0000
+date:   2017-05-30 20:04:43 -0400
 ---
 
 
@@ -14,9 +14,11 @@ I wanted to touch on some of the concepts that I feel are important for less-tha
 
 While solving one of the curriculum labs that tests for Prime numbers, I embarked on a much different approach than used by the good folks at [Learn.co](http://www.learn.co).  The solution used the concept, the "[Seive of Aristophenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)". Without a deep dive into the process, essentially the "seive" is formed by generating a list of integers from 2 to the number in question.  I chose to use a different, but related method which essentially starts with a guess for the square root and then begins iterating through all of the integers up to and including the square root of the number of interest. (And since we couldn't use the math library, I had to program a square root method as well).
 
-When I finished the lab, I then looked into refining my method as the challenge suggested, and duplicated the seive method and began testing.  What immediately stood out was that testing for Prime numbers of signficant size began growing seemingly exponentially in time once the test number was big enough. In fact the size of 1x10^9 hit the memory limit and on 8 GB of RAM, the problem could not be solved.  With the method I had chosen, since no values were stored in memory other than that being tested, it proved to work so long as enough time to process the integers was available.  I tried one number, 105,557,999,999,978,742,919, which tied up my MacBook Pro for almost a day before I hit Control-C.  This number was later solved in 17 steps by altering the solution's approach (see below).
+When I finished the lab, I then looked into refining my method as the challenge suggested, and duplicated the seive method and began testing.  What immediately stood out was that testing for Prime numbers of signficant size the time to build the seive began growing seemingly exponentially with the test number input. In fact, the size of 1x10^9 hit the memory limit and on 8 GB of RAM (while also utilizing swap memory), the problem could not be solved in any reasonable amount of time.  I let it run for several hours before quitting.  
 
-So something to think about with problems that utilize a lot of memory, efficiency begins to blur because processor and even Big-O become overtaken by memory issues. In fact, most of the time the computer spent in actually generating the test array. It's important to understand this when dealing with large sets of resident data stored in memory.
+With the method I had originally chosen, since no values were stored in memory other than that being tested, it proved to work so long as enough time to process the integers was available.  I tried one number, 105,557,999,999,978,742,919, which tied up my MacBook Pro for almost a day before I hit Control-C.  This number was later solved in 17 steps by altering the solution's approach (see below).
+
+So, for something to think about with problems that utilize a lot of memory, efficiency begins to blur because processor and even Big-O become overtaken by memory issues. In fact, using the seive method, the computer spent most of its time in actually generating the test array! It's important to understand this when dealing with large sets of resident data stored in memory.
 
 Here are a few recorded examples from the two methods:
 ```
