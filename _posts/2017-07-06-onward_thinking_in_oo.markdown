@@ -26,6 +26,7 @@ When you see
 ```
 class Box 
   attr_accessor :a, :b, :c, :d
+	
   def initialize(a,b,c,d)
     @a = a 
     @b = b 
