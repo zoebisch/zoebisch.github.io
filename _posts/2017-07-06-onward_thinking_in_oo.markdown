@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Onward! (Thinking in OO)"
-date:   2017-07-06 17:21:41 +0000
+date:   2017-07-06 13:21:42 -0400
 ---
 
 
@@ -36,7 +36,7 @@ class Box
 end
 ```
 
-You will go from reading and associating what a, b, c, d  to *seeing* a box with four sides.  
+You will go from reading and associating what a, b, c, d  are within the context, to simply *seeing* a box with four sides.  
 
        
 
