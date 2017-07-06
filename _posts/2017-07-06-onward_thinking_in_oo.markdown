@@ -5,7 +5,7 @@ date:   2017-07-06 13:21:42 -0400
 ---
 
 
-I heard someone once quoted as saying something to the effect that people who learned how to program in procedural methods would never make the transition to Object Oriented Programming (OOP).
+I heard someone once referenced as saying something to the effect that people who learned how to program in procedural methods would never make the transition to Object Oriented Programming (OOP).
 
 I don't believe this is true. We can do anything we put our minds and effort to!
 
@@ -38,6 +38,8 @@ end
 ```
 
 You will go from reading and associating what a, b, c, d  are within the context, to simply *seeing* a box with four sides.  It would be ok, and arguably very important, to ask yourself questions at this point: "Where is the top and bottom"? "Couldn't they all be the same size or only two sizes"?  to a likely conclusion "Oh, it's a box without a top or bottom, that for some reason needs to identify it's sides to the world". 
+
+So if you grew up like Bob, learn to think like Dave. You have the grammar, now just seek the context. 
 
        
 
