@@ -37,7 +37,7 @@ class Box
 end
 ```
 
-You will go from reading and associating what a, b, c, d  are within the context, to simply *seeing* a box with four sides.  
+You will go from reading and associating what a, b, c, d  are within the context, to simply *seeing* a box with four sides.  It would be ok, and arguably very important, to ask yourself questions at this point: "Where is the top and bottom"? "Couldn't they all be the same size or only two sizes"?  to a likely conclusion "Oh, it's a box without a top or bottom, that for some reason needs to identify it's sides to the world". 
 
        
 
