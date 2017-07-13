@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Craigslist scraping, IP bans and other adventures in programming"
-date:   2017-07-13 04:55:20 +0000
+title:  "Craigslist scraping, IP bans and other adventures."
+date:   2017-07-13 00:55:21 -0400
 ---
 
 
