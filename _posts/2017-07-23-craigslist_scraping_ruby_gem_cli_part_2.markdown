@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Craigslist Scraping, Ruby Gem CLI part 2"
-date:   2017-07-23 03:53:30 +0000
+date:   2017-07-22 23:53:31 -0400
 ---
 
 
@@ -21,7 +21,9 @@ Part of the trickiness with this was there are certain things that have to be do
 
 I had originally embarked on working with some more advanced statistics on the data.  But because the whole project just got pretty big, I decided to focus on making everything clean, functional and (hopefully) using best practices, which is the real goal of this project.  
 
-In the end I spent waaay too much time on this, but I am proud of it.  I think it works great and is way more quick to use than CL with all of the visual clutter.  I have already been having A LOT of fun, just to see what's out there. Things like $20,000 perfume evaporators, Metallica tickets, Antique stools and ().  Speaking of tickets, this is a great way to find them.  What makes this so nice is you can quickly juggle through the data for your price.  I hope to add some kind of fuzzy price logic because hey, after all you wouldn't want to miss seeing Radiohead because the search cut you off at $100 when the price was $105, now would you? 
+In the end I spent waaay too much time on this, but I am proud of it.  I think it works great and is way more quick to use than CL with all of the visual clutter.  I have already been having A LOT of fun, just to see what's out there. Things like $20,000 perfume evaporators, Metallica tickets, Antique stools and even an $800 Star Wars Destroyer!  
+
+**Speaking of tickets, this is a great way to find them**.  What makes this so nice is you can quickly juggle through the data for your price.  I hope to add some kind of fuzzy price logic because hey, after all you wouldn't want to miss seeing Radiohead because the search cut you off at $100 when the price was $105, now would you? 
 
 So, I hope you can find it useful too. 
 
