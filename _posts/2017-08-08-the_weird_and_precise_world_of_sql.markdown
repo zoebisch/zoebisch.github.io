@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The weird and precise world of SQL"
-date:   2017-08-08 21:20:58 +0000
+date:   2017-08-08 17:20:59 -0400
 ---
 
 
@@ -19,15 +19,16 @@ If you are working with SQL, the very best thing you can do is this:
 
 Seriously, do it.  It will all make a TON more sense when you start doing this.  I have been using "[DB Browser for SQLITE"](http://http://sqlitebrowser.org/). It's free, easy to use and works just fine, especially if you are learning.  
 
-Armed with your new Database tool, you can now open the database you are working with and quickly run some queries to see what you are getting back.  What I suggest, in the beginning, is an iterative approach on the query to start finding what you are actually getting back.  You are not going to get anything less than that, nor anything else.  So if you are trying to "selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_funding_goal". Start simple:
+Armed with your new Database tool, you can now open the database you are working with and quickly run some queries to see what you are getting back.  What I suggest, in the beginning, is an iterative approach on the query to start finding what you are actually getting back.  You are not going to get anything less than that, nor anything else.  So if you are trying to "selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_funding_goal".
 
-```
+
 SELECT * FROM projects;
-```
+
 
 Now look back at the goal : selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_funding_goal.  Here is how I choose to break it down.  
 1. Don't fall into seeing just writing in your SELECT statement first. Use the * . The reason for this is when you are learning how SQL JOINS and GROUPS, it's very helpful to see what is left over.  You can come back to that later.  Make this your last step, at least until you are familiar enough with the process.
 2. Try playing around with what JOIN gives you in the DB Browser.  This will help you wrap your head around what is being given back. Note, in the case of a straight JOIN, try playing around with the ordering of left/right for the table:
+
 ```
 SELECT * FROM projects JOIN pledges;
 
@@ -35,12 +36,17 @@ VS.
 
 SELECT * FROM pledges JOIN projects;
 ```
+
+
 3. Keep building in the complexity one step at a time and see what is coming back to you from the query:
+
 ```
 SELECT * FROM projects
- JOIN pledges ON projects.id = pledges.project_id
+JOIN pledges ON projects.id = pledges.project_id
 ```
+
 4. Now comes the mental juggle.  Things get a little weird when you invoke "GROUP BY".  Try different colums from each table that has been joined and observe closely what happens to your results.
+
 ```
 SELECT * FROM  projects 
 JOIN pledges ON projects.id = pledges.project_id 
@@ -50,21 +56,25 @@ VS.
 
 SELECT * FROM  projects 
 JOIN pledges ON projects.id = pledges.project_id 
-GROUP BY projects.category;
 ```
+
 In the spirit of not giving away the lab answer, I will leave it at that.  I will however leave you with some final thoughts: 
-You can do interesting things on your selectors (so long as the information has been properly JOINed and GROUPed BY statements.  
+You can do interesting things on your selectors (so long as the information has been properly JOINed and GROUPed BY 
+
 ```
 SELECT pledges.amount - projects.funding_goal FROM  projects 
 JOIN pledges ON projects.id = pledges.project_id 
 GROUP BY projects.funding_goal;
 ```
+
 Here you can see a mathematical operation on two different columns from two different tables that have been properly joined and grouped! You add this as *if it were one item to be selected*.  So you just separate with a comma after the operation:
+
 ```
 SELECT pledges.amount - projects.funding_goal, projects.category FROM  projects 
 JOIN pledges ON projects.id = pledges.project_id 
 GROUP BY projects.funding_goal;
 ```
+
 
 So if you are a little stuck, these pointers may come in handy!
 
