@@ -56,6 +56,7 @@ VS.
 
 SELECT * FROM  projects 
 JOIN pledges ON projects.id = pledges.project_id 
+GROUP BY projects.amount;
 ```
 
 In the spirit of not giving away the lab answer, I will leave it at that.  I will however leave you with some final thoughts: 
