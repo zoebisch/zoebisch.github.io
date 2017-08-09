@@ -21,9 +21,9 @@ Seriously, do it.  It will all make a TON more sense when you start doing this. 
 
 Armed with your new Database tool, you can now open the database you are working with and quickly run some queries to see what you are getting back.  What I suggest, in the beginning, is an iterative approach on the query to start finding what you are actually getting back.  You are not going to get anything less than that, nor anything else.  So if you are trying to "selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_funding_goal".
 
-
-`SELECT * FROM projects;`
-
+```
+SELECT * FROM projects;
+```
 
 Now look back at the goal : selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_funding_goal.  Here is how I choose to break it down.  
 1. Don't fall into seeing just writing in your SELECT statement first. Use the * . The reason for this is when you are learning how SQL JOINS and GROUPS, it's very helpful to see what is left over.  You can come back to that later.  Make this your last step, at least until you are familiar enough with the process.
