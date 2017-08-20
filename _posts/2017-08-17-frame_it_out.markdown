@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Frame it out!"
-date:   2017-08-17 03:00:40 +0000
+date:   2017-08-16 23:00:41 -0400
 ---
 
 
@@ -21,7 +21,7 @@ Instead, as you progress through, make sure you really grasp these items:
 3. Forms. 
 4. Did I mention forms?
 
-So MVC is kind of self-explanatory.  The key here is mapping the idea in your head to the code.  One important aspect is where things live.  That is a key reflection of the flow for the program, which always is, but becomes especially important with Metaprogramming and DSL's that do things like automatically look for where corresponding route erb files live. So it's best to just interrelate these concepts in your head, and keep practicing. 
+So Model View Controller (MVC) is kind of self-explanatory.  The key here is mapping the idea in your head to the code.  One important aspect is where things live.  That is a key reflection of the flow for the program, which always is, but becomes especially important with Metaprogramming and DSL's that do things like automatically look for where corresponding route erb files live. So it's best to just interrelate these concepts in your head, and keep practicing. 
 
 It's building in that scaffolding that makes the project come alive, and honestly it's a bit of repetition of form.  Just do the same thing, the same way, over and over.  If you keep doing this, THE RIGHT WAY (as our good friends at Flatiron have laid out for us), you will end up learning the foundations for the REST method. It's just that simple. Just like we used specific naming conventions when doing database migrations, the same idea comes into play here.  Although, one big difference is, if you alter the naming conventions with Sinatra, Sinatra won't care, it will still work, unlike migrations which are looking for exact key words when auto-generating the database from the migration file. So, I would advise disciplining your code to follow the convention: plurals for when you are working with more than one, singular when you are working with one, names reflecting the path (and/or visa-versa) and objects that reflect form (params) data.  It will all flow together nicely if you focus on doing so.   
 
@@ -39,11 +39,11 @@ So, I knew it was just down to how I was trying to pass in the path.  What I cou
 I'll give it away, only because it was so simple I had to laugh. To properly pass a path within the views directory:
 
 ```
-    erb :'subdirectory/embedded_ruby_file'
+erb :'subdirectory/embedded_ruby_file'
+
+i.e. 
 		
-		i.e. 
-		
-		erb :'pirates/new'
+erb :'pirates/new'
 ```
  
 I realized too, as I moved deeper into the lessons, that I was adding some stuff in that isn't particularly necessary.  Kind of like when you write a SQL statement in a Heredoc in Ruby, you can omit the termination character ";" you don't need elements such as html, body, nor DOCTYPE html within your erb.  Embedded Ruby is sharp enough to work around all that, but if you need them, they are there.  It would seem you  just don't have to include them in most cases. 
