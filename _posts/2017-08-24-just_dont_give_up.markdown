@@ -1,13 +1,13 @@
 ---
 layout: post
 title:  "Just don't give up!"
-date:   2017-08-24 04:07:47 +0000
+date:   2017-08-24 00:07:48 -0400
 ---
 
 
 So going back and forth between Sinatra, Active Record, Erb, Html, all starts to get a little blurry when you are experiencing it for the first time. 
 
-I was plugging away and then hit the dreaded wall. You know, the seemingly tiny little thing, like a grain of sand that you spend forever trying to get out your eye, but no matter how hard you try, no matter what you do, it's not coming out. I started feeling this way on the [Sinatra Playlister Lab](http://https://github.com/zoebisch/playlister-sinatra-v-000). I was at a really solid pace, things were coming together. I had a little bit of a struggle getting the joins table relationships worked out, but once that clicked it felt good.
+I was plugging away and then hit the dreaded wall. You know, the seemingly tiny little thing, like a grain of sand that you spend forever trying to get out your eye, but no matter how hard you try, no matter what you do, it's not coming out. I started feeling this way on the [Sinatra Playlister Lab](https://github.com/zoebisch/playlister-sinatra-v-000). I was at a really solid pace, things were coming together. I had a little bit of a struggle getting the joins table relationships worked out, but once that clicked it felt good.
 
 I started working on my routes and they were doing great. One by one, I was making good progress, and felt pretty good in my understanding. All except for one part. 
 
@@ -17,7 +17,7 @@ This stuff:
   <input type="text" name="song[artist_id]" id="Artist_Name" value="<%= @song.artist.name %>" ></input>
 ```
 
-Seems simple enough right? But what exactly is this id anyway? Just some odd value? Not this is just what you know from CSS. It is an id selector. For some reason, that never clicked in my head.  I mean it all seemed so new, and with so many other things going on, it seemed one small detail that you just "needed".  Ahh but Capybara will drive you mad if you don't get this.  This is what Capybara seems to be looking for, at least in the cases I have been exposed to so far. Do yourself a favor, and if the test tells you that it bombed like so:
+Seems simple enough right? But what exactly is this id anyway? Just some odd value? No, this is just what you know from CSS. It is an id selector. For some reason, that never clicked in my head.  I mean it all seemed so new, and with so many other things going on, it seemed one small detail that you just "needed".  Ahh but Capybara will drive you mad if you don't get this.  This is what Capybara seems to be looking for, at least in the cases I have been exposed to so far. Do yourself a favor, and if the test tells you that it bombed like so:
 
 ```
     Capybara::ElementNotFound:
