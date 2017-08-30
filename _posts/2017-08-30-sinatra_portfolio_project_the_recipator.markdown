@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Sinatra Portfolio Project, "The Recipator""
+title:  "Sinatra Portfolio Project - "The Recipator""
 date:   2017-08-30 01:16:17 -0400
 ---
 
@@ -24,7 +24,7 @@ class Recipe < ActiveRecord::Base
 end
 ```
 
-You see that ":class_name => 'Recipe_Ingredients'?  Same thing with User_Recipes.  I was going nuts trying to associate Recipes with Ingredients and I kept getting a "has_many :through uninitialized constant" error, and specifically calling out the class forced it to work. Didn't make me too happy, because it *should* have worked without stressing, but here's the rest of it:
+You see that ":class_name => 'Recipe_Ingredients'?  Same thing with User_Recipes.  I was going nuts trying to associate Recipes with Ingredients and I kept getting a "has_many :through uninitialized constant" error, and specifically calling out the class forced it to work. On a suggestion from a stackexchange post, I changed RecipeIngredients to Recipe_Ingredients, but that didn't work either.  Didn't make me too happy, because it *should* have worked without stressing, but here's the rest of it:
 
 ```
 class Recipe_Ingredients < ActiveRecord::Base
