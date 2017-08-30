@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Sinatra Portfolio Project, "The Recipator""
-date:   2017-08-30 05:16:16 +0000
+date:   2017-08-30 01:16:17 -0400
 ---
 
 
