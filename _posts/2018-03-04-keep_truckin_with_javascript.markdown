@@ -1,0 +1,17 @@
+---
+layout: post
+title:      "Keep truckin' with JavaScript"
+date:       2018-03-04 17:38:46 +0000
+permalink:  keep_truckin_with_javascript
+---
+
+
+With my Rails portfolio project in the rear view mirror, I quickly threw myself into the depths of the Learn JavaScript curriculum.  It's totally fun, and again, a lot of ground gets covered in the curriculum so if you were like I was, don't panic! It will all come together when you get to your project, but you may end up spending more time than planned, or at least that was my case.  
+
+Once I hit the Rails - JS project, I realized how involved a lot of the underlying concepts are. One of the challenges I personally had was connecting project requirements when looking back on the curriculum (try searching for "remote: true" to refresh yourself with the concept and you will see what I mean.  I am pretty sure it was covered in video, and I do know that it is the culmination of learning prior underlying concepts, and essentially a shortcut- kind of like using generators in rails as opposed to building them out yourself only with jQuery AJAX and Rails magick).  I felt I spent a good deal of time trying to wrap my head around taking what I had already from my existing project and morphing it into the new requirements.  
+
+The biggest issue for me was fitting the requirements into the existing framework.  Since my views were not simple renderings for a controller view, i.e. houses/index doesn't simply show a list of houses, it was linked to houses.projects and the iteration created links to said projects I couldn't simply render the houses as json. I opted instead to keep the projects for an address hidden, and use jQuery to pull json renderings of the projects list when clicked.  This was fairly straight-forward, and I was able to use the has_many belongs_to relationship under the hood for the serializers. 
+
+What seemed to take the most time was the final requirement of building out objects from the json using a prototype method and then rendering them to the page without refresh.  Taking a step backward in my explanation, I had spent a lot of time just getting the page to render without refresh.  I could do it in one instance but then after form submission, the form button (rendered from a form partial) would just stay in a submitted position/state.  The solution to this was to return false at the end of the script.  This seems strange but, from my understanding, is necessary to bypass the submission of the form in its normal usage.  I *think* this is like when we use event.preventDefault(), but for working with form_for submissions.  You have no idea how much time I wasted trying to figure this out! 
+
+Looking back, much of this project has been a bit of a challenge for several reasons.  First off, let's face it, JavaScript, albeit powerful, has a rather cryptic pattern that must be learned/recognized before you can be useful in building out your own methods.  Second, integrating off of a pre-existing code base always comes with its own challenges because you have to morph existing architecture into something new.  Thirdly, there are some "flow" issues if you decide to branch out into handlebars templates and mixed javascript files and in-view javascript.  I ended up moving code sequences into particular "places" to get things to work.  (Basically the pages using in-view scripts were hung until the page using handlebars and a separate .js file was fired.  Moving the templates into the function which only fired on form submit solved this issue).  
